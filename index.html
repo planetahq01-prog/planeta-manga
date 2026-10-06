@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
-<meta name="theme-color" content="#07080d">
+<meta name="theme-color" content="#080607">
 <title>Planeta Mangá</title>
 
 <!-- Fontes -->
@@ -19,18 +19,18 @@
 <style>
 /* ============ TOKENS ============ */
 :root{
-  --ink:#07080d;
-  --ink-soft:#10111a;
-  --ink-elevated:#1b1c2a;
-  --ink-border:#2b2b3a;
-  --paper:#f4f0ff;
-  --paper-dim:#bdb6d5;
-  --text-muted:#9793b4;
-  --accent:#a78bfa;
-  --accent-dark:#7c3aed;
-  --gold:#fb7185;
-  --teal:#67e8f9;
-  --teal-dark:#0891b2;
+  --ink:#080607;
+  --ink-soft:#111012;
+  --ink-elevated:#1d1a1b;
+  --ink-border:#30282a;
+  --paper:#f4f4f5;
+  --paper-dim:#c5c2c4;
+  --text-muted:#929093;
+  --accent:#ee010f;
+  --accent-dark:#a9000b;
+  --gold:#ff3a49;
+  --teal:#f4f4f5;
+  --teal-dark:#bfc0c4;
   --radius-sm:8px;
   --radius-md:14px;
   --radius-lg:22px;
@@ -41,7 +41,7 @@
 *{box-sizing:border-box;}
 html,body{
   margin:0;padding:0;height:100%;color:var(--paper);font-family:var(--font-body);
-  background:radial-gradient(ellipse 900px 500px at 50% -10%, #151020 0%, var(--ink) 55%) var(--ink);
+  background:radial-gradient(ellipse 900px 500px at 50% -10%, #170609 0%, var(--ink) 55%) var(--ink);
   /* Bloqueia o pinch-zoom e o duplo-toque-pra-zoom nativos do navegador
      em todo o app (home, navegação, leitura). "pan-x pan-y" mantém a
      rolagem normal (vertical e os carrosséis horizontais) funcionando,
@@ -88,7 +88,7 @@ button:focus-visible, input:focus-visible{outline:2px solid var(--accent);outlin
   font-size:22px;letter-spacing:.5px;color:var(--paper);
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
 }
-.wordmark span{color:var(--accent);text-shadow:0 0 18px rgba(167,139,250,.45);}
+.wordmark span{color:var(--accent);text-shadow:0 0 18px rgba(238,1,15,.45);}
 .search-box{
   width:100%;display:flex;align-items:center;background:var(--ink-soft);
   border:1px solid var(--ink-border);border-radius:999px;
@@ -160,13 +160,13 @@ button:focus-visible, input:focus-visible{outline:2px solid var(--accent);outlin
 }
 .card .cover.loaded{opacity:1;transition:opacity .28s ease;}
 .card .cover-placeholder{
-  width:100%;aspect-ratio:2/3;background:linear-gradient(160deg,#e9e3f4,var(--paper));
+  width:100%;aspect-ratio:2/3;background:linear-gradient(160deg,#ededee,var(--paper));
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
   color:var(--ink);opacity:.55;padding:10px;
 }
 .card .cover-placeholder.skeleton{
   color:transparent;
-  background:linear-gradient(100deg,#dad4e8 25%,#f1ecfa 45%,#dad4e8 65%);
+  background:linear-gradient(100deg,#cccacc 25%,#ededee 45%,#cccacc 65%);
   background-size:200% 100%;animation:shimmer 1.3s infinite linear;
 }
 .card .cover-placeholder svg{width:28px;height:28px;opacity:.7;}
@@ -178,7 +178,7 @@ button:focus-visible, input:focus-visible{outline:2px solid var(--accent);outlin
   padding:8px 8px 4px;font-size:12px;font-weight:600;line-height:1.3;
   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
 }
-.card .meta{padding:0 8px 8px;font-size:10px;color:#817c96;display:flex;justify-content:space-between;align-items:center;gap:6px;}
+.card .meta{padding:0 8px 8px;font-size:10px;color:#969193;display:flex;justify-content:space-between;align-items:center;gap:6px;}
 .card .meta .ext-badge{background:var(--ink);color:var(--paper);padding:2px 6px;border-radius:4px;font-size:9px;letter-spacing:.4px;font-weight:700;flex-shrink:0;}
 .fav-btn{
   position:absolute;top:8px;left:8px;z-index:3;
@@ -250,7 +250,7 @@ button:focus-visible, input:focus-visible{outline:2px solid var(--accent);outlin
   border-top:1px solid var(--ink-border);
 }
 .dl-btn svg{width:13px;height:13px;}
-.dl-btn.done{background:linear-gradient(135deg,var(--teal),var(--teal-dark));color:#03211c;}
+.dl-btn.done{background:linear-gradient(135deg,var(--teal),var(--teal-dark));color:#111012;}
 .dl-btn:active{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;}
 
 /* ---- Cards de pasta — simplificados, no mesmo estilo dos cards das
@@ -289,7 +289,7 @@ button:focus-visible, input:focus-visible{outline:2px solid var(--accent);outlin
 .app-state{
   grid-column:1/-1;width:min(calc(100% - 24px),520px);margin:clamp(26px,8vh,72px) auto;padding:26px 20px;
   display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;
-  color:var(--paper-dim);background:linear-gradient(155deg,rgba(34,31,45,.78),rgba(16,17,26,.54));
+  color:var(--paper-dim);background:linear-gradient(155deg,rgba(26,20,21,.78),rgba(18,16,17,.54));
   border:1px solid rgba(255,255,255,.075);border-radius:18px;box-shadow:0 14px 34px rgba(0,0,0,.18);
 }
 #home-sections>.app-state{margin:22px auto;}
@@ -300,24 +300,24 @@ button:focus-visible, input:focus-visible{outline:2px solid var(--accent);outlin
 .app-state-message{max-width:430px;margin:0;color:var(--paper-dim);font-size:13px;line-height:1.6;overflow-wrap:anywhere;}
 .app-state-actions{width:min(100%,390px);display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin-top:5px;}
 .app-state-actions button{flex:1 1 150px;min-height:44px;padding:10px 14px;}
-.app-state-actions .btn-primary{width:auto;margin:0;box-shadow:0 8px 18px -10px rgba(167,139,250,.55);}
+.app-state-actions .btn-primary{width:auto;margin:0;box-shadow:0 8px 18px -10px rgba(238,1,15,.55);}
 .app-state-actions .btn-secondary{color:var(--paper);background:var(--ink-soft);}
 .app-state-error .app-state-icon{color:#fca5a5;}
-.app-state-loading{border-color:rgba(167,139,250,.12);}
+.app-state-loading{border-color:rgba(238,1,15,.12);}
 .reader-status .app-state{width:min(100%,460px);max-height:100%;margin:auto;overflow:auto;}
 .offline-screen{
   position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;
   padding:24px max(20px,env(safe-area-inset-right)) 24px max(20px,env(safe-area-inset-left));
-  background:radial-gradient(ellipse 780px 480px at 50% 8%,rgba(38,34,58,.96),rgba(7,8,13,.985) 68%);
+  background:radial-gradient(ellipse 780px 480px at 50% 8%,rgba(30,15,18,.96),rgba(8,6,7,.985) 68%);
   -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
 }
 .offline-screen.hidden{display:none;}
 .offline-card{
   width:min(100%,430px);padding:30px 24px 24px;text-align:center;border-radius:22px;
-  background:linear-gradient(155deg,rgba(34,31,45,.96),rgba(16,17,26,.97));
+  background:linear-gradient(155deg,rgba(26,20,21,.96),rgba(18,16,17,.97));
   border:1px solid rgba(255,255,255,.09);box-shadow:0 28px 72px rgba(0,0,0,.48);
 }
-.offline-icon{width:66px;height:66px;margin:0 auto 18px;border-radius:20px;display:grid;place-items:center;color:var(--accent);background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.17);}
+.offline-icon{width:66px;height:66px;margin:0 auto 18px;border-radius:20px;display:grid;place-items:center;color:var(--accent);background:rgba(238,1,15,.1);border:1px solid rgba(238,1,15,.17);}
 .offline-icon svg{width:34px;height:34px;}
 .offline-eyebrow{color:var(--accent);font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;}
 .offline-card h1{margin:0 0 10px;color:var(--paper);font-size:25px;line-height:1.2;letter-spacing:-.4px;}
@@ -344,7 +344,7 @@ button:focus-visible, input:focus-visible{outline:2px solid var(--accent);outlin
 .field input:focus-visible{outline:2px solid var(--accent);outline-offset:1px;}
 .btn-primary{
   background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;border:none;padding:14px 20px;
-  font-weight:700;font-size:14px;border-radius:999px;width:100%;box-shadow:0 10px 22px -10px rgba(167,139,250,.6);
+  font-weight:700;font-size:14px;border-radius:999px;width:100%;box-shadow:0 10px 22px -10px rgba(238,1,15,.6);
 }
 .btn-primary:active{filter:brightness(.9);}
 .btn-secondary{
@@ -405,7 +405,7 @@ button:focus-visible, input:focus-visible{outline:2px solid var(--accent);outlin
 /* Modo scroll (padrão) */
 .reader-scroll{
   flex:1;overflow-y:auto;overflow-x:auto;-webkit-overflow-scrolling:touch;background:#000;
-  touch-action:pan-y;
+  touch-action:pan-y;overscroll-behavior-y:contain;scroll-behavior:auto;
 }
 #reader-scroll-inner{width:100%;margin:0 auto;}
 /* Rolagem (Computador): mesma rolagem de sempre, só que a mangá não estica
@@ -436,7 +436,7 @@ button:focus-visible, input:focus-visible{outline:2px solid var(--accent);outlin
 .reader-status{
   position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
   gap:14px;color:var(--paper);font-size:15px;font-weight:600;text-align:center;padding:24px;
-  background:radial-gradient(ellipse 700px 400px at 50% 40%, #151020 0%, var(--ink) 60%) var(--ink);
+  background:radial-gradient(ellipse 700px 400px at 50% 40%, #170609 0%, var(--ink) 60%) var(--ink);
   z-index:10;
 }
 .reader-status #reader-status-pct{color:var(--gold);font-variant-numeric:tabular-nums;}
@@ -590,7 +590,7 @@ body.theme-transitioning .tab.active{
 .manga-logo-text{
   font-family:'Bangers',var(--font-display),sans-serif;
   letter-spacing:.03em;line-height:1;
-  background:linear-gradient(180deg,#fff59a 0%,#ffd400 35%,#e60012 100%);
+  background:linear-gradient(180deg,#ff4652 0%,#ee010f 35%,#e60012 100%);
   -webkit-background-clip:text;background-clip:text;color:transparent;
   -webkit-text-stroke:1px rgba(0,0,0,.35);
   text-shadow:0 3px 0 rgba(0,0,0,.25);
@@ -684,14 +684,14 @@ body.theme-transitioning .tab.active{
 #view-loading{
   position:fixed;inset:0;z-index:1000;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
-  background:radial-gradient(ellipse 900px 500px at 50% -10%, #151020 0%, var(--ink) 55%) var(--ink);
+  background:radial-gradient(ellipse 900px 500px at 50% -10%, #170609 0%, var(--ink) 55%) var(--ink);
   padding:24px;text-align:center;
 }
 #view-loading.hidden{display:none;}
 #view-loading .loading-word{
   font-family:var(--font-display);font-size:30px;letter-spacing:.5px;color:var(--paper);
 }
-#view-loading .loading-word span{color:var(--accent);text-shadow:0 0 18px rgba(167,139,250,.45);}
+#view-loading .loading-word span{color:var(--accent);text-shadow:0 0 18px rgba(238,1,15,.45);}
 #view-loading .loading-track{
   width:min(280px,80vw);height:8px;border-radius:999px;
   background:var(--ink-soft);border:1px solid var(--ink-border);overflow:hidden;
@@ -722,7 +722,7 @@ body.theme-transitioning .tab.active{
 .welcome-card{
   position:relative;width:100%;max-width:360px;
   background:var(--ink-soft);
-  background-image:radial-gradient(ellipse 260px 160px at 50% 0%, rgba(167,139,250,.16) 0%, transparent 70%);
+  background-image:radial-gradient(ellipse 260px 160px at 50% 0%, rgba(238,1,15,.16) 0%, transparent 70%);
   border:1px solid var(--ink-border);border-radius:var(--radius-lg);
   box-shadow:0 24px 60px -20px rgba(0,0,0,.75);
   padding:28px 24px 24px;text-align:center;
@@ -732,7 +732,7 @@ body.theme-transitioning .tab.active{
   width:56px;height:56px;margin:0 auto 16px;border-radius:50%;
   display:flex;align-items:center;justify-content:center;
   background:linear-gradient(135deg,var(--accent),var(--accent-dark));
-  box-shadow:0 10px 22px -8px rgba(167,139,250,.7);
+  box-shadow:0 10px 22px -8px rgba(238,1,15,.7);
   font-size:26px;
 }
 .welcome-card .wordmark{
@@ -758,17 +758,17 @@ body.theme-transitioning .tab.active{
 .topbar .wordmark span{font-weight:800;letter-spacing:.05em;text-shadow:none;}
 .brand-name{
   font-family:'Bangers',cursive;font-weight:400;letter-spacing:.035em;
-  text-shadow:0 2px 0 #05080d,0 4px 12px rgba(0,0,0,.35);
+  text-shadow:0 2px 0 #080607,0 4px 12px rgba(0,0,0,.35);
 }
 .brand-hq{
   display:inline-flex;align-items:center;justify-content:center;line-height:1;
-  padding:2px 6px 3px;background:linear-gradient(145deg,#c4b5fd,var(--accent));
-  color:#111722 !important;border:1px solid rgba(255,255,255,.28);
+  padding:2px 6px 3px;background:linear-gradient(145deg,#f4f4f5,var(--accent));
+  color:#171012 !important;border:1px solid rgba(255,255,255,.28);
   clip-path:polygon(8% 0,92% 0,100% 50%,92% 100%,8% 100%,0 50%);
   box-shadow:0 3px 10px rgba(0,0,0,.32);text-shadow:none !important;
   font-family:'Bangers',cursive;letter-spacing:.02em;
 }
-.brand-hq span{display:inline-block;color:#111722 !important;text-shadow:none !important;}
+.brand-hq span{display:inline-block;color:#171012 !important;text-shadow:none !important;}
 .topbar .wordmark{
   display:flex;align-items:center;justify-content:center;gap:4px;
   font-family:'Bangers',cursive;font-size:21px;font-weight:400;letter-spacing:0;
@@ -801,7 +801,7 @@ body.theme-transitioning .tab.active{
 }
 .bottom-nav-item.tab{
   position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
-  padding:2px 4px;background:none;border:0;color:#777287;
+  padding:2px 4px;background:none;border:0;color:#939092;
   font-size:10px;font-weight:600;letter-spacing:.02em;white-space:normal;
 }
 .bottom-nav-item.tab.active{color:var(--paper);}
@@ -816,7 +816,7 @@ body.theme-transitioning .tab.active{
 .app-menu{
   position:fixed;top:0;right:0;bottom:0;z-index:71;width:min(86vw,360px);
   padding:calc(20px + env(safe-area-inset-top)) 18px calc(18px + env(safe-area-inset-bottom));
-  overflow-y:auto;background:linear-gradient(160deg,#211d2b 0%,#14121b 46%,#100f16 100%);
+  overflow-y:auto;background:linear-gradient(160deg,#1b0e10 0%,#12090a 46%,#100708 100%);
   border-left:1px solid rgba(255,255,255,.1);box-shadow:-22px 0 60px rgba(0,0,0,.45);
   transform:translateX(102%);transition:transform .24s cubic-bezier(.2,.8,.2,1);
 }
@@ -836,19 +836,19 @@ body.theme-transitioning .tab.active{
 }
 .drawer-action:active{transform:scale(.98);background:rgba(255,255,255,.09);}
 .drawer-action.tab{position:static;white-space:normal;flex-shrink:initial;}
-.drawer-action.tab.active{color:var(--paper);border-color:rgba(167,139,250,.4);background:rgba(167,139,250,.09);}
+.drawer-action.tab.active{color:var(--paper);border-color:rgba(238,1,15,.4);background:rgba(238,1,15,.09);}
 .drawer-action.tab.active::after{content:none;}
 .drawer-icon{width:21px;height:21px;display:flex;align-items:center;justify-content:center;color:var(--paper-dim);}
 .drawer-icon svg{width:20px;height:20px;}
-.drawer-action:nth-of-type(7) .drawer-icon{color:#e36baf;}
-.drawer-action:nth-of-type(8) .drawer-icon{color:#42c878;}
-.drawer-chevron{margin-left:auto;color:#807a90;font-size:21px;font-weight:400;line-height:1;}
+.drawer-action:nth-of-type(7) .drawer-icon{color:#ee010f;}
+.drawer-action:nth-of-type(8) .drawer-icon{color:#d8d8dc;}
+.drawer-chevron{margin-left:auto;color:#969193;font-size:21px;font-weight:400;line-height:1;}
 .menu-footer{margin:28px 4px 8px;padding-top:18px;border-top:1px solid rgba(255,255,255,.07);color:var(--text-muted);font-size:11px;line-height:1.5;}
 body.menu-open{overflow:hidden;}
 
 .search-screen{
   position:fixed;inset:0;z-index:45;display:flex;flex-direction:column;
-  background:radial-gradient(ellipse 700px 340px at 50% -5%,rgba(167,139,250,.13),transparent 70%),#07080d;
+  background:radial-gradient(ellipse 700px 340px at 50% -5%,rgba(238,1,15,.13),transparent 70%),#080607;
   color:var(--paper);overflow:hidden;
 }
 .search-screen-header{
@@ -865,7 +865,7 @@ body.menu-open{overflow:hidden;}
 .search-intro h1{margin:0 0 8px;color:#fff;font-size:clamp(25px,7vw,34px);font-weight:800;letter-spacing:-.055em;line-height:1.1;}
 .search-intro p{margin:0;color:var(--text-muted);font-size:13px;line-height:1.55;}
 .search-page-box{
-  min-height:52px;padding:0 14px;border-radius:13px;background:#1a1821;
+  min-height:52px;padding:0 14px;border-radius:13px;background:#171315;
   border-color:#373341;box-shadow:0 12px 30px rgba(0,0,0,.18);
 }
 .search-page-box .search-icon svg{width:19px;height:19px;}
@@ -876,7 +876,7 @@ body.menu-open{overflow:hidden;}
 .suggestions-heading{margin-bottom:13px;}
 .search-chips{display:flex;flex-wrap:wrap;gap:9px;}
 .search-chip{padding:10px 14px;border:1px solid rgba(255,255,255,.1);border-radius:999px;background:rgba(255,255,255,.045);color:#e8e4ef;font-size:12px;font-weight:600;transition:background .15s ease,border-color .15s ease;}
-.search-chip:active{background:rgba(167,139,250,.15);border-color:rgba(167,139,250,.45);}
+.search-chip:active{background:rgba(238,1,15,.15);border-color:rgba(238,1,15,.45);}
 .search-results-heading{display:flex;align-items:center;gap:10px;margin:27px 0 4px;color:#d5d0df;}
 .results-accent{width:26px;height:2px;border-radius:2px;background:var(--accent);}
 .search-grid{padding:12px 0 28px;}
@@ -898,11 +898,11 @@ body.menu-open{overflow:hidden;}
 .section-view-all{
   flex:none;display:inline-flex;align-items:center;justify-content:center;gap:4px;
   margin-left:auto;padding:7px 10px;border-radius:999px;
-  color:var(--accent);background:rgba(167,139,250,.08);
-  border:1px solid rgba(167,139,250,.25);font-size:10px;font-weight:700;
+  color:var(--accent);background:rgba(238,1,15,.08);
+  border:1px solid rgba(238,1,15,.25);font-size:10px;font-weight:700;
   white-space:nowrap;transition:background .18s ease,border-color .18s ease,transform .18s ease;
 }
-.section-view-all:active{transform:scale(.96);background:rgba(167,139,250,.16);}
+.section-view-all:active{transform:scale(.96);background:rgba(238,1,15,.16);}
 .section-view-all .section-view-arrow{font-size:15px;line-height:.7;}
 /* Coleção completa no celular: três capas por linha, sem cartão claro/metadados. */
 /* O visual limpo das capas acompanha a coleção completa em qualquer tela. */
@@ -941,17 +941,17 @@ body.menu-open{overflow:hidden;}
 }
 
 
-/* Preferências finais: tema noturno próprio com acentos violeta, rosa e ciano e tipografia WhizBang.
+/* Preferências finais: tema noturno com acentos vermelho, branco e grafite inspirados no ícone.
    A família comercial WhizBang não é embutida/redistribuída neste HTML; será usada
    quando estiver instalada localmente ou quando for fornecido um webfont licenciado. */
 :root{
-  --ink:#07080d;--ink-soft:#10111a;--ink-elevated:#1b1c2a;--ink-border:#2b2b3a;
-  --accent:#a78bfa;--accent-dark:#7c3aed;--gold:#fb7185;
+  --ink:#080607;--ink-soft:#111012;--ink-elevated:#1d1a1b;--ink-border:#30282a;
+  --accent:#ee010f;--accent-dark:#a9000b;--gold:#ff3a49;
   --font-body:'WhizBang','Inter',sans-serif;
   --font-display:'WhizBang','Inter',sans-serif;
 }
 html,body,button,input,select,textarea{font-family:'WhizBang','Inter',sans-serif;}
-/* Marca tipográfica limpa: PLANETA branco, MANGÁ lavanda, sem badge ou efeitos. */
+/* Marca tipográfica limpa: PLANETA branco, MANGÁ vermelho, sem badge ou efeitos. */
 .wordmark,.brand-name,.brand-hq,.brand-hq span,.topbar .wordmark,
 #view-loading .loading-word,.welcome-card .wordmark,.setup h1,.search-screen-brand{
   font-family:'Inter',sans-serif !important;
@@ -963,12 +963,12 @@ html,body,button,input,select,textarea{font-family:'WhizBang','Inter',sans-serif
 }
 .brand-hq{
   display:inline-flex;align-items:center;justify-content:center;padding:0 !important;
-  background:none !important;color:#d8b4fe !important;border:0 !important;
+  background:none !important;color:#ee010f !important;border:0 !important;
   border-radius:0 !important;clip-path:none !important;box-shadow:none !important;
   transform:none !important;text-shadow:none !important;font-weight:900;letter-spacing:.07em;
 }
 .brand-hq span{
-  display:inline-block;color:#d8b4fe !important;transform:none !important;
+  display:inline-block;color:#ee010f !important;transform:none !important;
   text-shadow:none !important;font-weight:900;
 }
 #btn-menu{margin-right:0 !important;}
@@ -1007,7 +1007,7 @@ html,body,button,input,select,textarea{font-family:'WhizBang','Inter',sans-serif
 .bottom-nav{grid-template-columns:repeat(4,minmax(0,1fr));}
 .bottom-nav-item.menu-nav-item{
   position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
-  min-width:0;padding:2px 4px;border:0;border-radius:0;background:none;color:#777287;
+  min-width:0;padding:2px 4px;border:0;border-radius:0;background:none;color:#939092;
   font-size:10px;font-weight:600;letter-spacing:.02em;white-space:normal;
 }
 .bottom-nav-item.menu-nav-item .nav-icon{color:inherit;}
@@ -1032,7 +1032,7 @@ html,body,button,input,select,textarea{font-family:'WhizBang','Inter',sans-serif
 }
 .folder-download-current-icon{width:18px;height:18px;display:flex;color:var(--accent);}
 .folder-download-current-icon svg{width:18px;height:18px;}
-.folder-download-format{margin-left:auto;padding:3px 7px;border-radius:5px;background:rgba(103,232,249,.12);color:var(--teal);font-size:9px;font-weight:800;letter-spacing:.06em;}
+.folder-download-format{margin-left:auto;padding:3px 7px;border-radius:5px;background:rgba(255,255,255,.12);color:var(--teal);font-size:9px;font-weight:800;letter-spacing:.06em;}
 .folder-download-progress{
   position:fixed;left:12px;right:12px;bottom:calc(var(--nav-height) + env(safe-area-inset-bottom) + 12px);z-index:60;
   display:flex;flex-direction:column;gap:8px;padding:13px 14px;
@@ -1047,7 +1047,7 @@ html,body,button,input,select,textarea{font-family:'WhizBang','Inter',sans-serif
 .folder-download-progress progress::-webkit-progress-value{background:var(--accent);border-radius:99px;}
 .folder-download-progress progress::-moz-progress-bar{background:var(--accent);border-radius:99px;}
 .folder-download-cancel{align-self:flex-end;padding:6px 11px;border:1px solid var(--ink-border);border-radius:8px;background:transparent;color:var(--paper);font-size:11px;font-weight:700;}
-.folder-download-retry{align-self:flex-end;padding:7px 12px;border:1px solid rgba(167,139,250,.35);border-radius:8px;background:rgba(167,139,250,.1);color:var(--paper);font-size:11px;font-weight:800;}
+.folder-download-retry{align-self:flex-end;padding:7px 12px;border:1px solid rgba(238,1,15,.35);border-radius:8px;background:rgba(238,1,15,.1);color:var(--paper);font-size:11px;font-weight:800;}
 @media(min-width:700px){.folder-download-progress{left:auto;right:24px;width:min(440px,calc(100vw - 48px));}}
 
 
@@ -1059,11 +1059,11 @@ html,body,button,input,select,textarea{font-family:'WhizBang','Inter',sans-serif
 .downloads-folder-heading{display:flex;flex:1 1 120px;min-width:0;flex-direction:column;gap:3px;}
 .downloads-folder-heading strong{font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .downloads-folder-heading span{font-size:10px;color:var(--text-muted);}
-.downloads-folder-resume{padding:8px 10px;border:1px solid rgba(103,232,249,.35);border-radius:9px;background:rgba(103,232,249,.1);color:#6ee7d5;font-size:10px;font-weight:800;}
-.offline-download-folder-cover{background:linear-gradient(150deg,#172a32,#101820);}
-.offline-download-folder-placeholder{color:#62d8c4 !important;opacity:.9 !important;}
+.downloads-folder-resume{padding:8px 10px;border:1px solid rgba(255,255,255,.35);border-radius:9px;background:rgba(255,255,255,.1);color:#e5e5e7;font-size:10px;font-weight:800;}
+.offline-download-folder-cover{background:linear-gradient(150deg,#211012,#10090a);}
+.offline-download-folder-placeholder{color:#e0e0e2 !important;opacity:.9 !important;}
 .offline-download-folder-placeholder svg{width:38px !important;height:38px !important;}
-.offline-download-folder-badge{position:absolute;right:7px;top:7px;padding:4px 7px;border-radius:999px;background:rgba(7,8,13,.78);color:#72e0cc;font-size:8px;font-weight:900;letter-spacing:.08em;}
+.offline-download-folder-badge{position:absolute;right:7px;top:7px;padding:4px 7px;border-radius:999px;background:rgba(7,8,13,.78);color:#f4f4f5;font-size:8px;font-weight:900;letter-spacing:.08em;}
 .offline-download-folder-summary{padding:3px 2px 0;color:var(--text-muted);font-size:10px;line-height:1.35;}
 
 
@@ -1084,8 +1084,8 @@ html,body,button,input,select,textarea{font-family:'WhizBang','Inter',sans-serif
 .download-task-progress-fill{height:100%;border-radius:inherit;background:var(--accent);transition:width .22s ease;}
 .download-task-progress.indeterminate .download-task-progress-fill{width:34% !important;animation:download-progress-sweep 1.15s ease-in-out infinite alternate;}
 @keyframes download-progress-sweep{from{transform:translateX(-35%)}to{transform:translateX(200%)}}
-.download-task-complete{border-color:rgba(52,211,153,.28);background:rgba(6,78,59,.13);}
-.download-task-complete .download-task-status{color:#6ee7b7;}
+.download-task-complete{border-color:rgba(238,1,15,.30);background:rgba(238,1,15,.12);}
+.download-task-complete .download-task-status{color:#f4f4f5;}
 .download-task-actions{display:flex;gap:6px;margin-top:7px;flex-wrap:wrap;}
 .download-task-actions button{border:1px solid var(--ink-border);background:var(--ink-soft);color:var(--paper);border-radius:7px;padding:5px 8px;font-size:9px;font-weight:800;}
 .download-task-actions button.danger{border-color:rgba(248,113,113,.25);color:#fca5a5;background:rgba(127,29,29,.15);}
@@ -1107,17 +1107,17 @@ html,body,button,input,select,textarea{font-family:'WhizBang','Inter',sans-serif
 #btn-shelf,#shelf-picker-backdrop,#shelf-picker,#shelf-transition{display:none !important;}
 #view-setup .field,#view-setup details,#btn-save-config{display:none !important;}
 
-/* Identidade escura própria do Planeta Mangá: violeta, lavanda, rosa e ciano. */
+/* Identidade escura própria do Planeta Mangá: vermelho japonês, branco e grafite. */
 :root{
-  --ink:#07080d;--ink-soft:#10111a;--ink-elevated:#1b1c2a;--ink-border:#2b2b3a;
-  --paper:#f4f0ff;--paper-dim:#bdb6d5;--text-muted:#9793b4;
-  --accent:#a78bfa;--accent-dark:#7c3aed;--gold:#fb7185;
-  --teal:#67e8f9;--teal-dark:#0891b2;
+  --ink:#080607;--ink-soft:#111012;--ink-elevated:#1d1a1b;--ink-border:#30282a;
+  --paper:#f4f4f5;--paper-dim:#c5c2c4;--text-muted:#929093;
+  --accent:#ee010f;--accent-dark:#a9000b;--gold:#ff3a49;
+  --teal:#f4f4f5;--teal-dark:#bfc0c4;
 }
-html,body{background:radial-gradient(ellipse 900px 500px at 50% -10%,#151020 0%,var(--ink) 55%) var(--ink);}
+html,body{background:radial-gradient(ellipse 900px 500px at 50% -10%,#170609 0%,var(--ink) 55%) var(--ink);}
 .manga-brand-mark{width:27px;height:27px;flex:0 0 27px;display:block;filter:none;}
 .topbar .wordmark{gap:8px;}
-.topbar .wordmark .brand-hq,.topbar .wordmark .brand-hq span{color:#d8b4fe !important;text-shadow:0 0 12px rgba(167,139,250,.35) !important;}
+.topbar .wordmark .brand-hq,.topbar .wordmark .brand-hq span{color:#ee010f !important;text-shadow:0 0 12px rgba(238,1,15,.35) !important;}
 .topbar .wordmark .brand-name,.topbar .wordmark .brand-hq,.topbar .wordmark .brand-hq span{font-size:1em !important;font-weight:800 !important;letter-spacing:.025em !important;line-height:1;}
 
 /* Três capas no primeiro quadro do carrossel em celular; tablets/desktop mantêm 138px. */
@@ -1137,24 +1137,24 @@ html,body{background:radial-gradient(ellipse 900px 500px at 50% -10%,#151020 0%,
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 </head><body>
-  <div id="access-gate" class="hidden" style="position:fixed;inset:0;z-index:9999;background:#07080d;display:flex;align-items:center;justify-content:center;padding:24px;">
-    <div style="max-width:360px;width:100%;text-align:center;color:#f4f0ff;font-family:inherit;">
+  <div id="access-gate" class="hidden" style="position:fixed;inset:0;z-index:9999;background:#080607;display:flex;align-items:center;justify-content:center;padding:24px;">
+    <div style="max-width:360px;width:100%;text-align:center;color:#f4f4f5;font-family:inherit;">
       <h2 style="margin:0 0 8px;font-size:1.3rem;">Acesso ao Planeta Mangá</h2>
-      <p style="margin:0 0 20px;color:#bdb6d5;font-size:0.9rem;">Digite o código de acesso enviado por e-mail. O mesmo código do Planeta HQ funciona aqui.</p>
+      <p style="margin:0 0 20px;color:#c5c2c4;font-size:0.9rem;">Digite o código de acesso enviado por e-mail. O mesmo código do Planeta HQ funciona aqui.</p>
       <input id="access-gate-input" type="text" placeholder="XXXX-XXXX" autocapitalize="characters" autocomplete="off"
-        style="width:100%;box-sizing:border-box;padding:14px;font-size:1.1rem;text-align:center;letter-spacing:2px;border-radius:10px;border:1px solid #2b2b3a;background:#10111a;color:#fff;margin-bottom:12px;">
-      <button id="access-gate-submit" style="width:100%;padding:14px;border:none;border-radius:10px;background:#7c3aed;color:#fff;font-weight:600;font-size:1rem;cursor:pointer;">Entrar</button>
-      <p id="access-gate-status" style="min-height:20px;margin-top:12px;font-size:0.85rem;color:#fb7185;"></p>
+        style="width:100%;box-sizing:border-box;padding:14px;font-size:1.1rem;text-align:center;letter-spacing:2px;border-radius:10px;border:1px solid #30282a;background:#111012;color:#fff;margin-bottom:12px;">
+      <button id="access-gate-submit" style="width:100%;padding:14px;border:none;border-radius:10px;background:#a9000b;color:#fff;font-weight:600;font-size:1rem;cursor:pointer;">Entrar</button>
+      <p id="access-gate-status" style="min-height:20px;margin-top:12px;font-size:0.85rem;color:#ff3a49;"></p>
     </div>
   </div>
 
   <div id="devices-modal" class="hidden" style="position:fixed;inset:0;z-index:9998;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;padding:24px;">
-    <div style="background:#10111a;color:#f4f0ff;width:100%;max-width:420px;border-radius:16px;padding:20px;font-family:inherit;max-height:80vh;overflow-y:auto;">
+    <div style="background:#111012;color:#f4f4f5;width:100%;max-width:420px;border-radius:16px;padding:20px;font-family:inherit;max-height:80vh;overflow-y:auto;">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
         <h2 style="margin:0;font-size:1.15rem;">Seus aparelhos conectados</h2>
-        <button id="devices-modal-close" style="background:none;border:none;color:#bdb6d5;font-size:1.4rem;cursor:pointer;line-height:1;">×</button>
+        <button id="devices-modal-close" style="background:none;border:none;color:#c5c2c4;font-size:1.4rem;cursor:pointer;line-height:1;">×</button>
       </div>
-      <p id="devices-modal-sub" style="margin:6px 0 16px;color:#bdb6d5;font-size:0.85rem;"></p>
+      <p id="devices-modal-sub" style="margin:6px 0 16px;color:#c5c2c4;font-size:0.85rem;"></p>
       <div id="devices-modal-list"></div>
     </div>
   </div>
@@ -1223,12 +1223,12 @@ html,body{background:radial-gradient(ellipse 900px 500px at 50% -10%,#151020 0%,
     <header class="topbar">
       <div class="topbar-top">
         <div class="wordmark" aria-label="Planeta Mangá"><svg class="manga-brand-mark" viewBox="0 0 36 36" aria-hidden="true" focusable="false">
-  <circle cx="18" cy="18" r="16" fill="#181628" stroke="#a78bfa" stroke-width="1.5"/>
-  <path d="M6.5 12c4-1.8 8-.9 11.5 1.7v13.8c-3.7-2.5-7.7-3.1-11.5-1.3V12Z" fill="#211a34" stroke="#d8b4fe" stroke-width="1.4" stroke-linejoin="round"/>
-  <path d="M18 13.7c3.5-2.6 7.5-3.4 11.5-1.7v14.2c-3.8-1.8-7.8-1.2-11.5 1.3V13.7Z" fill="#171b30" stroke="#67e8f9" stroke-width="1.4" stroke-linejoin="round"/>
-  <path d="M18 14v13.6" stroke="#f4f0ff" stroke-width="1.2" stroke-linecap="round"/>
-  <path d="M5.5 8.2c7.1-5.1 18-5.3 25-.5" fill="none" stroke="#fb7185" stroke-width="1.5" stroke-linecap="round"/>
-  <circle cx="30.2" cy="8.2" r="1.8" fill="#fb7185"/>
+  <circle cx="18" cy="18" r="16" fill="#1a1113" stroke="#ee010f" stroke-width="1.5"/>
+  <path d="M6.5 12c4-1.8 8-.9 11.5 1.7v13.8c-3.7-2.5-7.7-3.1-11.5-1.3V12Z" fill="#1c0f11" stroke="#ee010f" stroke-width="1.4" stroke-linejoin="round"/>
+  <path d="M18 13.7c3.5-2.6 7.5-3.4 11.5-1.7v14.2c-3.8-1.8-7.8-1.2-11.5 1.3V13.7Z" fill="#221114" stroke="#f4f4f5" stroke-width="1.4" stroke-linejoin="round"/>
+  <path d="M18 14v13.6" stroke="#f4f4f5" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M5.5 8.2c7.1-5.1 18-5.3 25-.5" fill="none" stroke="#ff3a49" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="30.2" cy="8.2" r="1.8" fill="#ff3a49"/>
 </svg><span class="brand-name">PLANETA</span><span class="brand-hq"><span>MANGÁ</span></span></div>
         <div class="top-actions">
           <button class="icon-btn small hidden" id="btn-back" title="Voltar" aria-label="Voltar"></button>
@@ -2399,6 +2399,8 @@ function cancelBackgroundDownload(fileId){
 function createPageCache(maxEntries){
   maxEntries = maxEntries || 24;
   const map = new Map();
+  const pending = new Map();
+  let disposed = false;
   return {
     get(i){
       if(!map.has(i)) return undefined;
@@ -2416,11 +2418,36 @@ function createPageCache(maxEntries){
         map.delete(oldestKey);
       }
     },
+    getOrCreate(i, producer, isObjectUrl){
+      if(disposed) return Promise.reject(new Error('O documento de leitura já foi fechado.'));
+      const cached = this.get(i);
+      if(cached !== undefined) return Promise.resolve(cached);
+      if(pending.has(i)) return pending.get(i);
+      const task = Promise.resolve().then(producer).then(value=>{
+        if(disposed){
+          if(isObjectUrl){ try{ URL.revokeObjectURL(value); }catch(e){} }
+          return value;
+        }
+        this.set(i, value, isObjectUrl);
+        return value;
+      }).finally(()=>pending.delete(i));
+      pending.set(i, task);
+      return task;
+    },
     disposeAll(){
+      disposed = true;
+      pending.clear();
       map.forEach(entry=>{ if(entry.isObjectUrl){ try{ URL.revokeObjectURL(entry.value); }catch(e){} } });
       map.clear();
     }
   };
+}
+
+function readerPageCacheLimit(){
+  const compact = window.matchMedia ? window.matchMedia('(max-width: 699px)').matches : (window.innerWidth||0) < 700;
+  if(!compact) return 16;
+  const memory = Number(navigator.deviceMemory) || 4;
+  return memory <= 2 ? 4 : 6;
 }
 
 /* ---------------------------------------------------------------------
@@ -2436,16 +2463,14 @@ async function openComicCBZ(blob){
     .filter(n=>!zip.files[n].dir && /\.(jpe?g|png|webp|gif)$/i.test(n))
     .sort(naturalSort);
   if(names.length === 0) throw new Error('Nenhuma imagem encontrada dentro do CBZ.');
-  const cache = createPageCache(24);
+  const cache = createPageCache(readerPageCacheLimit());
   return {
     pageCount: names.length,
     async getPage(i){
-      const cached = cache.get(i);
-      if(cached) return cached;
-      const fileBlob = await zip.files[names[i]].async('blob');
-      const url = URL.createObjectURL(fileBlob);
-      cache.set(i, url, true);
-      return url;
+      return cache.getOrCreate(i, async()=>{
+        const fileBlob = await zip.files[names[i]].async('blob');
+        return URL.createObjectURL(fileBlob);
+      }, true);
     },
     dispose(){
       cache.disposeAll();
@@ -2493,23 +2518,21 @@ async function openComicCBR(blob){
     .map(h=>h.name)
     .sort(naturalSort);
   if(names.length === 0) throw new Error('Nenhuma imagem encontrada dentro do CBR.');
-  const cache = createPageCache(24);
+  const cache = createPageCache(readerPageCacheLimit());
   return {
     pageCount: names.length,
     async getPage(i){
-      const cached = cache.get(i);
-      if(cached) return cached;
-      const name = names[i];
-      // Extrai só a página pedida, uma de cada vez (igual ao CBZ) — evita
-      // guardar o gibi inteiro descompactado na memória ao mesmo tempo.
-      const extracted = extractor.extract({ files: [name] });
-      const first = [...extracted.files][0];
-      if(!first || !first.extraction) throw new Error('Falha ao extrair página do CBR: ' + name);
-      const mime = /\.png$/i.test(name) ? 'image/png' : /\.webp$/i.test(name) ? 'image/webp' : /\.gif$/i.test(name) ? 'image/gif' : 'image/jpeg';
-      const pageBlob = new Blob([first.extraction], { type: mime });
-      const url = URL.createObjectURL(pageBlob);
-      cache.set(i, url, true);
-      return url;
+      return cache.getOrCreate(i, async()=>{
+        const name = names[i];
+        // Extrai só a página pedida, uma de cada vez (igual ao CBZ) — evita
+        // guardar o mangá inteiro descompactado na memória ao mesmo tempo.
+        const extracted = extractor.extract({ files: [name] });
+        const first = [...extracted.files][0];
+        if(!first || !first.extraction) throw new Error('Falha ao extrair página do CBR: ' + name);
+        const mime = /\.png$/i.test(name) ? 'image/png' : /\.webp$/i.test(name) ? 'image/webp' : /\.gif$/i.test(name) ? 'image/gif' : 'image/jpeg';
+        const pageBlob = new Blob([first.extraction], { type: mime });
+        return URL.createObjectURL(pageBlob);
+      }, true);
     },
     dispose(){
       cache.disposeAll();
@@ -2524,6 +2547,7 @@ async function openComicCBR(blob){
 // sabemos ser rápido, mesmo em arquivos grandes) pra abrir a partir dele.
 const PDF_STREAM_TIMEOUT_MS = 12000;
 async function loadPdfWithFallback(source, onProgress, knownSize, fileId, signal){
+  const abortErr = ()=> new DOMException('Carregamento cancelado.', 'AbortError');
   if(typeof source !== 'string'){
     // Antes: 'await source.arrayBuffer()' lia o Blob inteiro de uma vez na
     // memória. Em PDFs grandes (ex.: os convertidos em altíssima resolução
@@ -2535,14 +2559,22 @@ async function loadPdfWithFallback(source, onProgress, knownSize, fileId, signal
     // pdf.js ler por pedacinhos (igual já faz com PDF vindo direto da
     // rede, mais abaixo) evita carregar o arquivo inteiro de uma vez.
     const objectUrl = URL.createObjectURL(source);
+    let loadingTask=null,onBlobAbort=null;
     try{
-      const loadingTask = pdfjsLib.getDocument({
+      loadingTask = pdfjsLib.getDocument({
         url: objectUrl,
         rangeChunkSize: 1 << 18,
         cMapUrl: new URL('./vendor/pdfjs/cmaps/', document.baseURI).href,
         cMapPacked: true
       });
+      onBlobAbort = ()=>{ loadingTask.destroy().catch(()=>{}); };
+      if(signal){
+        if(signal.aborted) onBlobAbort();
+        else signal.addEventListener('abort', onBlobAbort, {once:true});
+      }
+      if(signal && signal.aborted) throw abortErr();
       const pdf = await loadingTask.promise;
+      if(signal && signal.aborted){ pdf.destroy().catch(()=>{}); throw abortErr(); }
       // Guardado no próprio doc pra ser revogado em openComicPDF() quando o
       // leitor for fechado (dispose()) — revogar cedo demais quebraria a
       // leitura das páginas seguintes.
@@ -2550,7 +2582,10 @@ async function loadPdfWithFallback(source, onProgress, knownSize, fileId, signal
       return pdf;
     }catch(e){
       URL.revokeObjectURL(objectUrl);
+      if(signal && signal.aborted) throw abortErr();
       throw e;
+    }finally{
+      if(signal && onBlobAbort) signal.removeEventListener('abort', onBlobAbort);
     }
   }
   const loadingTask = pdfjsLib.getDocument({
@@ -2576,7 +2611,6 @@ async function loadPdfWithFallback(source, onProgress, knownSize, fileId, signal
     if(signal.aborted) onAbort();
     else signal.addEventListener('abort', onAbort, {once:true});
   }
-  const abortErr = ()=> new DOMException('Carregamento cancelado.', 'AbortError');
   let streamTimer;
   try{
     if(!fileId) return await loadingTask.promise;
@@ -2613,11 +2647,9 @@ async function loadPdfWithFallback(source, onProgress, knownSize, fileId, signal
 async function openComicPDF(source, onProgress, knownSize, fileId, signal){
   pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
   const pdf = await loadPdfWithFallback(source, onProgress, knownSize, fileId, signal);
-  // 14 em vez de 24: as páginas agora saem em resolução bem maior (ver
-  // getPage abaixo), então cada uma pesa bem mais em memória — reduzir
-  // quantas ficam guardadas ao mesmo tempo evita que o app fique pesado
-  // ou trave em aparelhos com pouca RAM.
-  const cache = createPageCache(14);
+  // Cache menor em celular: evita manter muitas páginas rasterizadas em
+  // memória enquanto o navegador também conserva as imagens já decodificadas.
+  const cache = createPageCache(readerPageCacheLimit());
   // Bug corrigido: ao abrir a leitura, cacheCoverFromDoc() dispara em
   // segundo plano (sem esperar) um getPage(0) neste MESMO doc pra gerar a
   // capinha. Se a pessoa voltar pra biblioteca rápido, closeReader()
@@ -2641,37 +2673,36 @@ async function openComicPDF(source, onProgress, knownSize, fileId, signal){
   return {
     pageCount: pdf.numPages,
     async getPage(i){
-      const cached = cache.get(i);
-      if(cached) return cached;
-      activePageRenders++;
-      try{
-        const page = await pdf.getPage(i+1);
+      return cache.getOrCreate(i, async()=>{
+        activePageRenders++;
+        try{
+          const page = await pdf.getPage(i+1);
         // Antes: scale fixo de 2, sempre a mesma resolução não importa a
         // tela do aparelho. Isso ficava nitidamente pior que o visualizador
         // do biblioteca (que desenha na resolução real da tela) em
         // qualquer celular com tela de alta densidade — a maioria hoje —,
         // e a compressão JPEG por cima ainda borrava mais os traços e as
         // tramas de pontos comuns em gibi antigo.
-        // Agora: renderiza na largura física real da tela (CSS width ×
-        // devicePixelRatio), com um teto pra não estourar memória em
-        // telas gigantes/muito densas, e nunca abaixo do scale 2 de antes
-        // (telas antigas/pequenas continuam pelo menos como estavam).
+        // Acompanha a densidade física da tela, mas limita DPR, resolução e
+        // páginas em cache em celulares para reduzir picos de rasterização.
         const base = page.getViewport({scale: 1});
-        const targetPhysicalWidth = Math.min(2400, (window.innerWidth || 1080) * (window.devicePixelRatio || 2));
-        const scale = Math.max(2, targetPhysicalWidth / base.width);
+        const compact = window.matchMedia ? window.matchMedia('(max-width: 699px)').matches : (window.innerWidth||0) < 700;
+        const maxDpr = compact ? 1.8 : 2;
+        const targetPhysicalWidth = Math.min(compact ? 1600 : 2400, (window.innerWidth || 1080) * Math.min(window.devicePixelRatio || 2, maxDpr));
+        const scale = Math.max(compact ? 1.6 : 2, targetPhysicalWidth / base.width);
         const viewport = page.getViewport({scale});
         const canvas = document.createElement('canvas');
         canvas.width = viewport.width; canvas.height = viewport.height;
         await page.render({canvasContext: canvas.getContext('2d'), viewport}).promise;
-        const url = canvas.toDataURL('image/jpeg', 0.95); // 0.9 → 0.95: menos artefato JPEG nos traços/tramas
-        canvas.width = 0; canvas.height = 0;
-        page.cleanup && page.cleanup();
-        cache.set(i, url, false);
-        return url;
-      } finally {
-        activePageRenders--;
-        if(activePageRenders === 0 && notifyAllRendersDone){ notifyAllRendersDone(); notifyAllRendersDone = null; }
-      }
+          const url = canvas.toDataURL('image/jpeg', 0.95); // 0.9 → 0.95: menos artefato JPEG nos traços/tramas
+          canvas.width = 0; canvas.height = 0;
+          page.cleanup && page.cleanup();
+          return url;
+        } finally {
+          activePageRenders--;
+          if(activePageRenders === 0 && notifyAllRendersDone){ notifyAllRendersDone(); notifyAllRendersDone = null; }
+        }
+      }, false);
     },
     async dispose(){
       if(activePageRenders > 0){
@@ -5921,12 +5952,17 @@ async function openReader(fileMeta, forceLocal, parentId){
 async function rebuildReaderView(){
   const doc = state.reader.doc;
   if(!doc) return;
+  if(state.reader.scrollRestoreTimer){ clearTimeout(state.reader.scrollRestoreTimer); state.reader.scrollRestoreTimer=null; }
+  if(state.reader.scrollSaveTimer){ clearTimeout(state.reader.scrollSaveTimer); state.reader.scrollSaveTimer=null; }
+  const buildToken = (Number(state.reader.scrollBuildToken)||0) + 1;
+  state.reader.scrollBuildToken = buildToken;
+  state.reader.pageRequestToken = (Number(state.reader.pageRequestToken)||0) + 1;
   if(state.reader.scrollIO){ state.reader.scrollIO.disconnect(); state.reader.scrollIO = null; }
   if(state.reader.mode === 'scroll' || state.reader.mode === 'scroll-desktop'){
     $('#reader-stage').classList.add('hidden');
     $('#reader-scroll').classList.remove('hidden');
     $('#page-slider').classList.add('hidden');
-    await buildScrollReader(doc);
+    await buildScrollReader(doc, buildToken);
   } else if(state.reader.mode === 'double'){
     $('#reader-scroll').classList.add('hidden');
     $('#reader-stage').classList.remove('hidden');
@@ -5950,9 +5986,12 @@ async function rebuildReaderView(){
 async function showPage(i){
   const doc = state.reader.doc;
   if(!doc || i<0 || i>=doc.pageCount) return;
+  const pageToken = (Number(state.reader.pageRequestToken)||0) + 1;
+  state.reader.pageRequestToken = pageToken;
   state.reader.pageIndex=i;
   syncReaderBookmarkButton();
   const url=await doc.getPage(i);
+  if(state.reader.doc!==doc || state.reader.pageRequestToken!==pageToken || state.reader.mode==='double') return;
   $('#reader-img').src = url;
   $('#page-count').textContent = `${i+1} / ${doc.pageCount}`;
   $('#page-slider').value = i+1;
@@ -5970,20 +6009,26 @@ async function showPage(i){
 // sempre direta (sem efeito de "página virando" em 3D).
 async function showDoublePage(i, isNav){
   const doc = state.reader.doc;
-  if(!doc) return;
+  if(!doc || state.reader.mode!=='double') return;
   i = Math.max(0, Math.min(i, doc.pageCount-1));
   if(i % 2 === 1) i -= 1; // normaliza pro início do par
   if(isNav && i === state.reader.pageIndex) return; // já está na ponta (não tem mais o que virar)
+  const pageToken = (Number(state.reader.pageRequestToken)||0) + 1;
+  state.reader.pageRequestToken = pageToken;
   state.reader.pageIndex=i;
   syncReaderBookmarkButton();
   const hasSecond=i+1<doc.pageCount;
+  const [pageA,pageB] = await Promise.all([
+    doc.getPage(i),
+    hasSecond ? doc.getPage(i+1) : Promise.resolve('')
+  ]);
+  if(state.reader.doc!==doc || state.reader.pageRequestToken!==pageToken || state.reader.mode!=='double') return;
   const imgA = $('#reader-img-a'), imgB = $('#reader-img-b');
 
   imgA.classList.toggle('solo', !hasSecond);
   imgB.classList.toggle('hidden', !hasSecond);
-  imgA.src = await doc.getPage(i);
-  if(hasSecond) imgB.src = await doc.getPage(i+1);
-  else imgB.src = '';
+  imgA.src = pageA;
+  imgB.src = pageB;
 
   $('#page-count').textContent = hasSecond ? `${i+1}-${i+2} / ${doc.pageCount}` : `${i+1} / ${doc.pageCount}`;
   saveProgress(state.reader.fileMeta, i, doc.pageCount);
@@ -6014,22 +6059,57 @@ function applyFitAndZoom(){
   resetPinchZoom(img);
 }
 
-async function buildScrollReader(doc){
+async function buildScrollReader(doc, buildToken){
   const container=$('#reader-scroll');
   const restoreIndex=Math.max(0,Math.min(state.reader.pageIndex||0,doc.pageCount-1));
   const restoreRatio=state.reader.scrollRatio;
-  container.innerHTML='';container.scrollTop=0;container.scrollLeft=0;container.dataset.restoring=restoreRatio!=null||restoreIndex>0?'1':'';
+  const needsRestore=restoreRatio!=null||restoreIndex>0;
+  let restoreApplied=!needsRestore;
+  let io=null;
+  container.innerHTML='';container.scrollTop=0;container.scrollLeft=0;container.dataset.restoring=needsRestore?'1':'';
+  container._restoreCancelled=false;
+  if(!container._restoreCancelBound){
+    const cancelRestore=()=>{
+      if(container.dataset.restoring==='1'){
+        container._restoreCancelled=true;
+        container.dataset.restoring='';
+      }
+    };
+    container.addEventListener('touchstart',cancelRestore,{passive:true});
+    container.addEventListener('wheel',cancelRestore,{passive:true});
+    container.addEventListener('pointerdown',cancelRestore,{passive:true});
+    container._restoreCancelBound=true;
+  }
   const inner=el('div',state.reader.mode==='scroll-desktop'?'desktop-width':'');inner.id='reader-scroll-inner';container.appendChild(inner);
   const pageEls=[];
   for(let i=0;i<doc.pageCount;i++){
     const pageDiv=el('div','reader-page skeleton');pageDiv.dataset.index=String(i);inner.appendChild(pageDiv);pageEls.push(pageDiv);
   }
   $('#page-count').textContent=`${restoreIndex+1} / ${doc.pageCount}`;
-  const io=new IntersectionObserver(entries=>{
+  const isCurrentBuild=()=>state.reader.doc===doc && state.reader.scrollBuildToken===buildToken &&
+    (state.reader.mode==='scroll'||state.reader.mode==='scroll-desktop') && state.reader.scrollIO===io;
+  const finishRestore=(idx,pageDiv,failed)=>{
+    if(restoreApplied||container._restoreCancelled||!needsRestore||idx!==restoreIndex||!pageDiv||!isCurrentBuild()||!pageDiv.isConnected)return;
+    const image=pageDiv.querySelector('img');
+    if(!failed&&(!image||!image.complete||image.naturalWidth===0))return;
+    const cr=container.getBoundingClientRect(),pr=pageDiv.getBoundingClientRect();
+    const contentTop=container.scrollTop+(pr.top-cr.top);
+    const ratio=restoreRatio==null?0:Math.max(0,Math.min(1,Number(restoreRatio)||0));
+    const referenceOffset=restoreRatio==null?0:Math.min(100,container.clientHeight*.18);
+    container.scrollTop=Math.max(0,contentTop+pageDiv.clientHeight*ratio-referenceOffset);
+    restoreApplied=true;
+    container.dataset.restoring='';
+    state.reader.pageIndex=restoreIndex;state.reader.scrollRatio=restoreRatio;
+    $('#page-count').textContent=`${restoreIndex+1} / ${doc.pageCount}`;
+    syncReaderBookmarkButton();
+  };
+  const compact = window.matchMedia ? window.matchMedia('(max-width: 699px)').matches : (window.innerWidth||0) < 700;
+  const preloadMargin = compact ? '520px 0px' : '900px 0px';
+  io=new IntersectionObserver(entries=>{
     entries.forEach(entry=>{
       const idx=Number(entry.target.dataset.index);
       if(entry.isIntersecting){
-        loadScrollPage(doc,idx,pageEls[idx]);
+        loadScrollPage(doc,idx,pageEls[idx],finishRestore);
         if(entry.intersectionRatio>0.5){
           state.reader.pageIndex=idx;
           $('#page-count').textContent=`${idx+1} / ${doc.pageCount}`;
@@ -6038,14 +6118,15 @@ async function buildScrollReader(doc){
         }
       }else unloadScrollPage(pageEls[idx]);
     });
-  },{root:container,rootMargin:'900px 0px',threshold:[0,0.5]});
+  },{root:container,rootMargin:preloadMargin,threshold:[0,0.5]});
   pageEls.forEach(page=>io.observe(page));state.reader.scrollIO=io;
   let saveTimer=null;
   container.onscroll=()=>{
-    if(container.dataset.restoring==='1'||saveTimer)return;
+    if(container.dataset.restoring==='1')return;
+    if(saveTimer) clearTimeout(saveTimer);
     saveTimer=setTimeout(()=>{
-      saveTimer=null;
-      if(state.reader.doc!==doc||container.dataset.restoring==='1')return;
+      saveTimer=null;state.reader.scrollSaveTimer=null;
+      if(state.reader.doc!==doc||state.reader.scrollBuildToken!==buildToken||container.dataset.restoring==='1')return;
       const cr=container.getBoundingClientRect();
       const referenceY=cr.top+Math.min(100,cr.height*.18);
       const page=pageEls.find(node=>node.getBoundingClientRect().bottom>referenceY)||pageEls[pageEls.length-1];
@@ -6055,11 +6136,13 @@ async function buildScrollReader(doc){
       $('#page-count').textContent=`${idx+1} / ${doc.pageCount}`;
       syncReaderBookmarkButton();
       saveProgress(state.reader.fileMeta,idx,doc.pageCount,ratio);
-    },280);
+    },220);
+    state.reader.scrollSaveTimer=saveTimer;
   };
-  if(restoreRatio!=null||restoreIndex>0){
-    setTimeout(()=>{
-      if(state.reader.doc!==doc)return;
+  if(needsRestore){
+    state.reader.scrollRestoreTimer=setTimeout(()=>{
+      state.reader.scrollRestoreTimer=null;
+      if(restoreApplied||container._restoreCancelled||!isCurrentBuild())return;
       const page=pageEls[restoreIndex];if(!page)return;
       if(restoreRatio!=null){
         const cr=container.getBoundingClientRect(),pr=page.getBoundingClientRect();
@@ -6067,32 +6150,55 @@ async function buildScrollReader(doc){
         const referenceOffset=Math.min(100,container.clientHeight*.18);
         container.scrollTop=Math.max(0,contentTop+pr.height*restoreRatio-referenceOffset);
       }else page.scrollIntoView({block:'start'});
-      state.reader.pageIndex=restoreIndex;state.reader.scrollRatio=restoreRatio;
-      $('#page-count').textContent=`${restoreIndex+1} / ${doc.pageCount}`;
-      syncReaderBookmarkButton();
-      container.dataset.restoring='';
+      requestAnimationFrame(()=>finishRestore(restoreIndex,page,false));
     },80);
   }else container.dataset.restoring='';
 }
-async function loadScrollPage(doc, i, pageDiv){
-  if(pageDiv.dataset.loaded) return;
+async function loadScrollPage(doc, i, pageDiv, onSettled){
+  if(!pageDiv || !pageDiv.isConnected || pageDiv.dataset.loaded) return;
+  const request = (Number(pageDiv.dataset.loadRequest)||0) + 1;
+  pageDiv.dataset.loadRequest = String(request);
   pageDiv.dataset.loaded = '1';
   try{
     const url = await doc.getPage(i);
+    if(pageDiv.dataset.loadRequest !== String(request) || !pageDiv.isConnected) return;
     const img = el('img');
     img.src = url;
-    img.loading = 'lazy';
+    img.loading = 'eager';
+    img.decoding = 'async';
     img.alt = `Página ${i+1}`;
-    pageDiv.classList.remove('skeleton');
+    if(typeof img.decode === 'function'){
+      try{ await img.decode(); }
+      catch(decodeError){ if(!img.complete || img.naturalWidth===0) throw decodeError; }
+    }
+    if(pageDiv.dataset.loadRequest !== String(request) || !pageDiv.isConnected) return;
     pageDiv.innerHTML = '';
     pageDiv.appendChild(img);
+    pageDiv.classList.remove('skeleton');
+    pageDiv.dataset.loadAttempts='0';
+    if(onSettled) onSettled(i,pageDiv,false);
   }catch(e){
-    pageDiv.dataset.loaded = '';
+    if(pageDiv.dataset.loadRequest === String(request)){
+      pageDiv.dataset.loaded = '';
+      pageDiv.classList.add('skeleton');
+      const attempts=Number(pageDiv.dataset.loadAttempts)||0;
+      if(attempts<2){
+        pageDiv.dataset.loadAttempts=String(attempts+1);
+        setTimeout(()=>{
+          if(pageDiv.isConnected&&pageDiv.dataset.loadRequest===String(request)&&!pageDiv.dataset.loaded)loadScrollPage(doc,i,pageDiv,onSettled);
+        },350*(attempts+1));
+      }else{
+        pageDiv.dataset.loadAttempts='0';
+        if(onSettled) onSettled(i,pageDiv,true);
+      }
+    }
   }
 }
 function unloadScrollPage(pageDiv){
   if(!pageDiv || !pageDiv.dataset.loaded) return;
+  pageDiv.dataset.loadRequest = String((Number(pageDiv.dataset.loadRequest)||0) + 1);
   pageDiv.dataset.loaded = '';
+  pageDiv.dataset.loadAttempts='0';
   pageDiv.innerHTML = '';
   pageDiv.classList.add('skeleton');
 }
@@ -6130,30 +6236,53 @@ function getPinchState(img){
 }
 
 function applyPinchTransform(img){
-  const z = getPinchState(img);
-  img.style.transformOrigin = '0 0';
-  img.style.willChange = 'transform';
-  img.style.transform = (z.scale===1 && z.tx===0 && z.ty===0) ? 'none' : `translate(${z.tx}px,${z.ty}px) scale(${z.scale})`;
+  if(img._pinchFrame) return;
+  img._pinchFrame = requestAnimationFrame(()=>{
+    img._pinchFrame = 0;
+    const z = getPinchState(img);
+    img.style.transformOrigin = '0 0';
+    img.style.transform = (z.scale===1 && z.tx===0 && z.ty===0) ? 'none' : `translate3d(${z.tx}px,${z.ty}px,0) scale(${z.scale})`;
+  });
 }
 
-// Mantém a imagem zoomada sobreposta à sua "caixa" (a página ou o
-// zoom-wrap), sem deixar o usuário arrastá-la pro vazio.
-function clampPinch(img, container){
+// Mede uma vez por gesto. Usar retângulos em cada touchmove forçava layout
+// repetidamente e era uma fonte de engasgos em WebViews móveis.
+function measurePinchBounds(img, container){
   const z = getPinchState(img);
+  const r = img.getBoundingClientRect();
   const c = container.getBoundingClientRect();
-  const scaledW = c.width * z.scale, scaledH = c.height * z.scale;
-  const minTx = Math.min(0, c.width - scaledW), minTy = Math.min(0, c.height - scaledH);
-  z.tx = Math.min(0, Math.max(minTx, z.tx));
-  z.ty = Math.min(0, Math.max(minTy, z.ty));
+  const scale = Math.max(1, z.scale);
+  return {
+    left:r.left-z.tx, top:r.top-z.ty, width:r.width/scale, height:r.height/scale,
+    clipLeft:c.left, clipTop:c.top, clipRight:c.right, clipBottom:c.bottom
+  };
+}
+
+// Mantém a imagem dentro da janela sem leituras geométricas durante o gesto.
+function clampPinch(img, bounds){
+  if(!bounds) return;
+  const z = getPinchState(img);
+  const scaledW = bounds.width * z.scale, scaledH = bounds.height * z.scale;
+  const minTx = Math.min(bounds.clipLeft-bounds.left, bounds.clipRight-bounds.left-scaledW);
+  const maxTx = Math.max(bounds.clipLeft-bounds.left, bounds.clipRight-bounds.left-scaledW);
+  const minTy = Math.min(bounds.clipTop-bounds.top, bounds.clipBottom-bounds.top-scaledH);
+  const maxTy = Math.max(bounds.clipTop-bounds.top, bounds.clipBottom-bounds.top-scaledH);
+  z.tx = Math.min(maxTx, Math.max(minTx, z.tx));
+  z.ty = Math.min(maxTy, Math.max(minTy, z.ty));
 }
 
 function resetPinchZoom(img){
   if(!img) return;
   const z = getPinchState(img);
   z.scale = 1; z.tx = 0; z.ty = 0;
+  img._pinchActive = false;
+  img.style.willChange = 'transform';
   img.style.transition = 'transform .18s ease';
   applyPinchTransform(img);
-  setTimeout(()=>{ img.style.transition = ''; }, 200);
+  setTimeout(()=>{
+    img.style.transition = '';
+    if(!img._pinchActive && getPinchState(img).scale <= 1.01) img.style.willChange = '';
+  }, 200);
 }
 
 // Liga o gesto de pinça/arrastar-com-zoom num `container` (a "janela"
@@ -6165,13 +6294,15 @@ function setupPinchZoom(container, getImg, getContainerFor){
   let img = null, mode = null; // mode: 'pinch' | 'pan'
   let prevDist = 0, prevMid = {x:0,y:0};
   let lastTouch = {x:0,y:0};
+  let gestureBounds = null;
 
   function endGesture(){
     if(img){
       const z = getPinchState(img);
+      img._pinchActive = false;
       if(z.scale <= 1.02) resetPinchZoom(img);
     }
-    img = null; mode = null;
+    img = null; mode = null; gestureBounds = null;
   }
 
   container.addEventListener('touchstart', (e)=>{
@@ -6182,7 +6313,10 @@ function setupPinchZoom(container, getImg, getContainerFor){
       img = target;
       mode = 'pinch';
       img.style.transition = '';
-      prevDist = pinchDist(e.touches[0], e.touches[1]);
+      img._pinchActive = true;
+      img.style.willChange = 'transform';
+      gestureBounds = measurePinchBounds(img, getContainerFor(img));
+      prevDist = Math.max(1, pinchDist(e.touches[0], e.touches[1]));
       prevMid = pinchMid(e.touches[0], e.touches[1]);
     } else if(e.touches.length===1){
       // Um dedo só numa página que JÁ está com zoom: arrastar passeia pela
@@ -6196,6 +6330,9 @@ function setupPinchZoom(container, getImg, getContainerFor){
         img = target;
         mode = 'pan';
         img.style.transition = '';
+        img._pinchActive = true;
+        img.style.willChange = 'transform';
+        gestureBounds = measurePinchBounds(img, getContainerFor(img));
         lastTouch = {x:e.touches[0].clientX, y:e.touches[0].clientY};
       }
     }
@@ -6207,12 +6344,13 @@ function setupPinchZoom(container, getImg, getContainerFor){
       const z = getPinchState(img);
       const newDist = pinchDist(e.touches[0], e.touches[1]);
       const newMid = pinchMid(e.touches[0], e.touches[1]);
-      const newScale = Math.min(PINCH_MAX_SCALE, Math.max(PINCH_MIN_SCALE, z.scale * (newDist/prevDist)));
-      z.tx = newMid.x - (prevMid.x - z.tx) * (newScale/z.scale);
-      z.ty = newMid.y - (prevMid.y - z.ty) * (newScale/z.scale);
+      const newScale = Math.min(PINCH_MAX_SCALE, Math.max(PINCH_MIN_SCALE, z.scale * (newDist/Math.max(1,prevDist))));
+      const scaleRatio = newScale/z.scale;
+      z.tx = (newMid.x-gestureBounds.left) - (prevMid.x-gestureBounds.left-z.tx)*scaleRatio;
+      z.ty = (newMid.y-gestureBounds.top) - (prevMid.y-gestureBounds.top-z.ty)*scaleRatio;
       z.scale = newScale;
       prevDist = newDist; prevMid = newMid;
-      clampPinch(img, getContainerFor(img));
+      clampPinch(img, gestureBounds);
       applyPinchTransform(img);
     } else if(mode==='pan' && e.touches.length===1 && img){
       const z = getPinchState(img);
@@ -6225,7 +6363,7 @@ function setupPinchZoom(container, getImg, getContainerFor){
       const prevTx = z.tx, prevTy = z.ty;
       z.tx += dx;
       z.ty += dy;
-      clampPinch(img, getContainerFor(img));
+      clampPinch(img, gestureBounds);
       if(z.tx === prevTx && z.ty === prevTy){
         // Já está na borda da imagem nessa direção e não há mais o que
         // arrastar: não cancela o gesto, então no modo rolagem a lista
@@ -6267,14 +6405,19 @@ setupPinchZoom(
   (img)=> img.closest('.reader-page')
 );
 
-// Modo paginado: sempre a mesma imagem; escuta no reader-stage inteiro
-// (não só no zoom-wrap) porque os botões invisíveis de página
-// anterior/próxima ficam por cima da imagem e senão engoliriam o toque
-// antes da pinça começar. A "caixa" fixa pro cálculo é o #zoom-wrap.
+// Modo paginado: escuta no reader-stage inteiro (não só no zoom-wrap)
+// porque os botões invisíveis de navegação ficam por cima da imagem. No modo
+// dupla, escolhe a página realmente tocada dentro do spread.
 setupPinchZoom(
   $('#reader-stage'),
-  ()=> $('#reader-img'),
-  ()=> $('#zoom-wrap')
+  (e)=>{
+    if(state.reader.mode==='double'){
+      const page=e.target.closest('.double-page');
+      return page&&!page.classList.contains('hidden')?page:null;
+    }
+    return $('#reader-img');
+  },
+  (img)=> state.reader.mode==='double' ? $('#double-wrap') : $('#zoom-wrap')
 );
 
 // Tela cheia de leitura: o menu (barra de cima e de baixo) fica escondido
@@ -6332,6 +6475,10 @@ async function openAdjacentComic(delta){
 }
 
 function closeReader(){
+  if(state.reader.scrollRestoreTimer){ clearTimeout(state.reader.scrollRestoreTimer); state.reader.scrollRestoreTimer=null; }
+  if(state.reader.scrollSaveTimer){ clearTimeout(state.reader.scrollSaveTimer); state.reader.scrollSaveTimer=null; }
+  state.reader.scrollBuildToken = (Number(state.reader.scrollBuildToken)||0) + 1;
+  state.reader.pageRequestToken = (Number(state.reader.pageRequestToken)||0) + 1;
   // Mesmo motivo do início de openReader(): se a pessoa fechar o leitor
   // com uma mangá em CBR/CBZ ainda baixando, cancela de verdade em vez de
   // deixar rodando sozinho em segundo plano gastando dados à toa.
@@ -8448,33 +8595,33 @@ async function openDevicesModal(){
   const list = $('#devices-modal-list');
   const sub = $('#devices-modal-sub');
   modal.classList.remove('hidden');
-  list.innerHTML = '<p style="color:#bdb6d5;">Carregando...</p>';
+  list.innerHTML = '<p style="color:#c5c2c4;">Carregando...</p>';
   sub.textContent = '';
   try{
     const res = await fetch(`${CONFIG.proxyUrl}?list_devices=1&code=${encodeURIComponent(ACCESS_CODE || '')}&device=${encodeURIComponent(getDeviceId())}&type=${encodeURIComponent(getDeviceType())}`, {cache:'no-store'});
     const data = await res.json();
     if(!res.ok || data.error){
-      list.innerHTML = `<p style="color:#fb7185;">${escapeHtml(data.error || 'Não consegui carregar.')}</p>`;
+      list.innerHTML = `<p style="color:#ff3a49;">${escapeHtml(data.error || 'Não consegui carregar.')}</p>`;
       return;
     }
     sub.textContent = `${data.devices.length} de ${data.max} vagas em uso. Seu código de acesso funciona em até ${data.max} aparelhos ao mesmo tempo.`;
     if(data.devices.length === 0){
-      list.innerHTML = '<p style="color:#bdb6d5;">Nenhum aparelho registrado ainda.</p>';
+      list.innerHTML = '<p style="color:#c5c2c4;">Nenhum aparelho registrado ainda.</p>';
       return;
     }
     list.innerHTML = '';
     data.devices.forEach((d)=>{
       const row = document.createElement('div');
-      row.style.cssText = 'display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid #2b2b3a;';
+      row.style.cssText = 'display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid #30282a;';
       const label = document.createElement('div');
       const emoji = d.type === 'desktop' ? '💻' : '📱';
       const label2 = d.isThis ? 'Este aparelho' : (d.type === 'desktop' ? 'Computador' : 'Aparelho');
-      label.innerHTML = `<div style="font-weight:600;">${emoji} ${label2}</div><div style="font-size:0.8rem;color:#bdb6d5;">Usado pela última vez ${formatDeviceDate(d.lastUsed)}</div>`;
+      label.innerHTML = `<div style="font-weight:600;">${emoji} ${label2}</div><div style="font-size:0.8rem;color:#c5c2c4;">Usado pela última vez ${formatDeviceDate(d.lastUsed)}</div>`;
       row.appendChild(label);
       if(!d.isThis){
         const btn = document.createElement('button');
         btn.textContent = 'Remover';
-        btn.style.cssText = 'background:none;border:1px solid #fb7185;color:#fb7185;border-radius:8px;padding:8px 12px;font-size:0.85rem;cursor:pointer;flex-shrink:0;';
+        btn.style.cssText = 'background:none;border:1px solid #ff3a49;color:#ff3a49;border-radius:8px;padding:8px 12px;font-size:0.85rem;cursor:pointer;flex-shrink:0;';
         btn.onclick = async ()=>{
           if(!confirm('Remover este aparelho? Ele vai precisar digitar o código de novo pra voltar a acessar.')) return;
           btn.disabled = true;
@@ -8492,7 +8639,7 @@ async function openDevicesModal(){
       list.appendChild(row);
     });
   }catch(e){
-    list.innerHTML = '<p style="color:#fb7185;">Falha ao carregar. Confira sua conexão.</p>';
+    list.innerHTML = '<p style="color:#ff3a49;">Falha ao carregar. Confira sua conexão.</p>';
   }
 }
 // As funções de "aquecer capas" que existiam aqui (collectAllComicsForCoverWarm,
@@ -8756,7 +8903,7 @@ async function boot(){
 }
 
 initConnectivityEvents();
-window.PLANETAMANGA_BUILD='v6';
+window.PLANETAMANGA_BUILD='v8';
 const appBootPromise = boot();
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
