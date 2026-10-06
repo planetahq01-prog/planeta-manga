@@ -4,7 +4,7 @@
  * respostas do proxy, biblioteca, mangás ou capas. Para atualizações, incremente a versão.
  */
 const CACHE_PREFIX = 'planeta-manga-shell-';
-const CACHE_VERSION = 'v6';
+const CACHE_VERSION = 'v8';
 const CACHE_NAME = `${CACHE_PREFIX}${CACHE_VERSION}`;
 const API_ORIGIN = 'https://proxy1.planetahq01.workers.dev';
 const INDEX_URL = new URL('./index.html', self.registration.scope).href;
